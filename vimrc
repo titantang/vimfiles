@@ -1,0 +1,112 @@
+" load pathogen plugin manager
+call pathogen#runtime_append_all_bundles()
+
+" global settings
+syntax on
+set nocompatible
+set backspace=2
+let mapleader=","
+set autoindent
+set smartindent
+set hidden
+filetype plugin indent on
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+set laststatus=2
+
+"=====================
+
+
+" preference settings
+colorscheme molokai
+set colorcolumn=80
+
+set tabstop=4
+set shiftwidth=4
+
+" search and replace
+noremap / /\v
+set incsearch
+set hlsearch
+set showmatch
+set gdefault
+set ignorecase
+set smartcase
+
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+"set list
+"set listchars=tab:▸\ ,eol:¬
+
+"=====================
+
+
+" encoding settings for support chinese
+set fileencodings=ucs-bom,utf-8,cp936
+set fileencoding=utf-8
+set encoding=utf-8
+
+"====================
+
+
+" keymappings
+noremap <a-1> 1gt<cr>
+noremap <a-2> 2gt<cr>
+noremap <a-3> 3gt<cr>
+noremap <a-4> 4gt<cr>
+noremap <a-5> 5gt<cr>
+noremap <a-6> 6gt<cr>
+noremap <a-7> 7gt<cr>
+noremap <a-8> 8gt<cr>
+noremap <a-9> 9gt<cr>
+
+noremap <c-t> :CommandT<cr>
+set pastetoggle=<f2> " do not auto indent when pasting code
+nnoremap j gj
+nnoremap k gk
+nnoremap <leader>a :Ack
+
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+"noremap <c-V> <esc>"+gP
+
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
+
+"====================
+
+
+" Functions
+command Preview :!firefox %<CR>
+
+"===================
+
+
+" code folding
+"set foldmethod=indent   "fold based on indent
+"set foldnestmax=10      "deepest fold is 10 levels
+"set nofoldenable        "dont fold by default
+"set foldlevel=1         "this is just what i use
+
+"==================
+
+" zencoding
+"==================
+let g:user_zen_settings = {
+\  'php' : {
+\    'extends' : 'html',
+\    'filters' : 'c',
+\  },
+\  'xml' : {
+\    'extends' : 'html',
+\  },
+\  'haml' : {
+\    'extends' : 'html',
+\  },
+\  'erb' : {
+\    'extends' : 'html',
+\  },
+\}
+
