@@ -22,3 +22,6 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = http://github.com/T1tan/vim-matchit.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = https://github.com/scrooloose/snipmate-snippets.git
