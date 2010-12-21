@@ -23,6 +23,8 @@ set colorcolumn=80
 set tabstop=4
 set shiftwidth=4
 
+set guifont=Anonymous\ Pro\ 12
+
 " search and replace
 noremap / /\v
 set incsearch
@@ -74,6 +76,8 @@ vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
+
+map <silent> <leader>tf :NERDTreeFind<cr>
 
 "====================
 
