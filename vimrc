@@ -18,7 +18,7 @@ set laststatus=2
 
 " preference settings
 colorscheme molokai
-set guifont=Droid\ Sans\ Mono\ 11
+set guifont=Monaco
 set colorcolumn=80
 
 set tabstop=4
