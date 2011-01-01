@@ -43,3 +43,6 @@
 [submodule "bundle/gist-vim"]
 	path = bundle/gist-vim
 	url = https://github.com/mattn/gist-vim.git
+[submodule "bundle/visual_studio"]
+	path = bundle/visual_studio
+	url = https://github.com/vim-scripts/visual_studio.vim.git
