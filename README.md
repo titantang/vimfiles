@@ -26,6 +26,19 @@ And if you find some configuration is missing or can be more useful, please let 
 	$ cd ~/.vim && git submodule init &&	git submodule update
 	$ cd ~ && ln -s .vim/vimrc .vimrc
 
+## For windows users
+Edit the original _vimrc file to include the vimrc file here.
+And resolve encoding issues by specifying languages and menu settings.
+Take my setting as a sample:
+
+	set nocompatible
+	source $VIM/vimfiles/vimrc
+	source $VIMRUNTIME/vimrc_example.vim
+	source $VIMRUNTIME/mswin.vim
+	source $VIMRUNTIME/delmenu.vim
+	language messages en_US.utf-8
+	behave mswin
+
 ## License
 
 I don't know which license to use, maybe GPL version 3. Use it as you like, as long as you do not violate the license of plugins.

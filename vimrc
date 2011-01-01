@@ -16,7 +16,7 @@ filetype plugin indent on
 
 " preference settings
 colorscheme molokai
-set guifont=Monaco
+set guifont=Monaco:h10
 set colorcolumn=80
 
 set tabstop=4
@@ -40,9 +40,13 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 
 " encoding settings for support chinese
-set fileencodings=ucs-bom,utf-8,cp936
-set fileencoding=utf-8
 set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936
+if has("win32")
+	set fileencoding=chinese
+else
+	set fileencoding=utf-8
+endif
 
 "====================
 
