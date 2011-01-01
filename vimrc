@@ -124,4 +124,5 @@ let Tlist_Sort_Type = 'name'			"使taglist以tag名字进行排序
 let Tlist_Close_On_Select = 1			"选择了tag后自动关闭taglist窗口
 let Tlist_GainFocus_On_ToggleOpen = 1	"TlistToggle时,输入焦点在taglist窗口中
 map <silent> <leader>tl :TlistToggle<cr>
+map <silent> <leader>nt :NERDTreeToggle<cr>
 
