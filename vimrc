@@ -16,7 +16,7 @@ filetype plugin indent on
 
 " preference settings
 colorscheme molokai
-set guifont=Monaco:h10
+set guifont=Monaco
 set colorcolumn=80
 
 set tabstop=4
