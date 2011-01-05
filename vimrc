@@ -88,7 +88,7 @@ command Preview :!firefox %<CR>
 
 
 " code folding
-"set foldmethod=indent   "fold based on indent
+set foldmethod=syntax
 "set foldnestmax=10      "deepest fold is 10 levels
 "set nofoldenable        "dont fold by default
 "set foldlevel=1         "this is just what i use
@@ -112,6 +112,7 @@ let g:user_zen_settings = {
 \    'extends' : 'html',
 \  },
 \}
+let g:use_zen_complete_tag = 1
 
 "==================
 
