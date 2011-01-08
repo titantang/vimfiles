@@ -90,7 +90,7 @@ command Preview :!firefox %<CR>
 " code folding
 set foldmethod=syntax
 "set foldnestmax=10      "deepest fold is 10 levels
-"set nofoldenable        "dont fold by default
+set nofoldenable        "dont fold by default
 "set foldlevel=1         "this is just what i use
 
 "==================
