@@ -127,3 +127,4 @@ let Tlist_GainFocus_On_ToggleOpen = 1	"TlistToggle时,输入焦点在taglist窗�
 map <silent> <leader>tl :TlistToggle<cr>
 map <silent> <leader>nt :NERDTreeToggle<cr>
 
+let g:blogconfig = "~titan/.vim/blog.config"

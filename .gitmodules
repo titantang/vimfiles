@@ -46,3 +46,6 @@
 [submodule "bundle/visual_studio"]
 	path = bundle/visual_studio
 	url = https://github.com/T1tan/visual_studio.vim.git
+[submodule "bundle/vimblog"]
+	path = bundle/vimblog
+	url = https://github.com/T1tan/vimblog.git
