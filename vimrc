@@ -82,7 +82,11 @@ imap <C-v> <ESC>"+pa
 
 
 " Functions
-command Preview :!firefox %<CR>
+if has("win32")
+	command Preview :!firefox %<CR>
+else
+	command Preview :!xdg-open %<CR>
+endif
 
 "===================
 
