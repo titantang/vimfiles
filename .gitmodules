@@ -49,3 +49,6 @@
 [submodule "bundle/vimblog"]
 	path = bundle/vimblog
 	url = https://github.com/T1tan/vimblog.git
+[submodule "bundle/blogit"]
+	path = bundle/blogit
+	url = http://git.symlink.me/pub/romain/blogit.git/
