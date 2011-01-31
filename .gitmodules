@@ -52,3 +52,6 @@
 [submodule "bundle/blogit"]
 	path = bundle/blogit
 	url = http://git.symlink.me/pub/romain/blogit.git/
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
