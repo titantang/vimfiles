@@ -1,6 +1,13 @@
 " load pathogen plugin manager
 call pathogen#runtime_append_all_bundles()
 
+" load snipmate-snippets support_functions.vim
+try
+  source ~/.vim/snippets/support_functions.vim
+catch
+  source ~/vimfiles/snippets/support_functions.vim
+endtry
+
 " global settings
 syntax on
 set nocompatible
@@ -9,6 +16,7 @@ let mapleader=","
 set autoindent
 set smartindent
 set hidden
+set visualbell t_vb=					" disable error bell sound
 filetype plugin indent on
 
 "=====================
@@ -16,7 +24,7 @@ filetype plugin indent on
 
 " preference settings
 colorscheme molokai
-set guifont=Monaco
+set guifont=Monaco\ 11
 set colorcolumn=80
 
 set tabstop=4
