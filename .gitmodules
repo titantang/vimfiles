@@ -1,9 +1,6 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
-[submodule "bundle/snipmate.vim"]
-	path = bundle/snipmate.vim
-	url = http://github.com/T1tan/snipmate.vim.git
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = http://github.com/tpope/vim-rails.git
@@ -13,12 +10,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = http://github.com/ervandew/supertab.git
-[submodule "bundle/surround"]
-	path = bundle/surround
-	url = http://github.com/T1tan/vim-surround.git
-[submodule "bundle/matchit"]
-	path = bundle/matchit
-	url = http://github.com/T1tan/vim-matchit.git
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
@@ -28,27 +19,33 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/taglist.vim"]
-	path = bundle/taglist.vim
-	url = http://github.com/T1tan/taglist.vim.git
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
-[submodule "bundle/taskpaper.vim.git"]
-	path = bundle/taskpaper.vim.git
-	url = https://github.com/T1tan/taskpaper.vim.git
 [submodule "bundle/gist-vim"]
 	path = bundle/gist-vim
 	url = https://github.com/mattn/gist-vim.git
-[submodule "bundle/visual_studio"]
-	path = bundle/visual_studio
-	url = https://github.com/T1tan/visual_studio.vim.git
-[submodule "bundle/vimblog"]
-	path = bundle/vimblog
-	url = https://github.com/T1tan/vimblog.git
 [submodule "bundle/blogit"]
 	path = bundle/blogit
 	url = http://git.symlink.me/pub/romain/blogit.git/
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = https://github.com/mattn/zencoding-vim.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "bundle/taskpaper"]
+	path = bundle/taskpaper
+	url = https://github.com/davidoc/taskpaper.vim.git
