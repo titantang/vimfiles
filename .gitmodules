@@ -31,9 +31,6 @@
 [submodule "bundle/taglist.vim"]
 	path = bundle/taglist.vim
 	url = http://github.com/T1tan/taglist.vim.git
-[submodule "bundle/zencoding-vim"]
-	path = bundle/zencoding-vim
-	url = http://github.com/T1tan/zencoding-vim.git
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
