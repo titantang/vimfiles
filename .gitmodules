@@ -46,3 +46,6 @@
 [submodule "bundle/taskpaper"]
 	path = bundle/taskpaper
 	url = https://github.com/davidoc/taskpaper.vim.git
+[submodule "snipmate-snippets"]
+	path = snipmate-snippets
+	url = https://github.com/scrooloose/snipmate-snippets.git
