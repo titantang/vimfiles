@@ -49,3 +49,6 @@
 [submodule "snipmate-snippets"]
 	path = snipmate-snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
