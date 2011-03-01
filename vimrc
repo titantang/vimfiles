@@ -27,6 +27,7 @@ filetype plugin indent on
 colorscheme molokai
 set guifont=Monaco\ 11
 set colorcolumn=80
+noremap ; :
 
 set tabstop=4
 set shiftwidth=4
