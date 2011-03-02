@@ -19,6 +19,7 @@ set smartindent
 set hidden
 set visualbell t_vb=					" disable error bell sound
 filetype plugin indent on
+noremap ; :
 
 "=====================
 
