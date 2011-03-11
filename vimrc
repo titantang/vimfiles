@@ -1,13 +1,14 @@
 " load pathogen plugin manager
 call pathogen#runtime_append_all_bundles()
 
-let g:snippets_dir="~/.vim/snipmate-snippets"
 " load snipmate-snippets support_functions.vim
-try
-  source ~/.vim/snipmate-snippets/support_functions.vim
-catch
+if has("win32")
+  let g:snippets_dir="~/vimfiles/snipmate-snippets"
   source ~/vimfiles/snipmate-snippets/support_functions.vim
-endtry
+else
+  let g:snippets_dir="~/.vim/snipmate-snippets"
+  source ~/.vim/snipmate-snippets/support_functions.vim
+endif
 
 " global settings
 syntax on
