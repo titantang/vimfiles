@@ -27,7 +27,11 @@ noremap ; :
 
 " preference settings
 colorscheme molokai
-set guifont=Anonymous\ Pro\:h11
+if has("win32")
+	set guifont=Anonymous\ Pro\:h11
+else
+	set guifont=Monaco
+endif
 set colorcolumn=80
 noremap ; :
 
