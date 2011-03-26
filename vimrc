@@ -1,13 +1,14 @@
 " load pathogen plugin manager
 call pathogen#runtime_append_all_bundles()
 
-let g:snippets_dir="~/.vim/snipmate-snippets"
 " load snipmate-snippets support_functions.vim
-try
-  source ~/.vim/snipmate-snippets/support_functions.vim
-catch
+if has("win32")
+  let g:snippets_dir="~/vimfiles/snipmate-snippets"
   source ~/vimfiles/snipmate-snippets/support_functions.vim
-endtry
+else
+  let g:snippets_dir="~/.vim/snipmate-snippets"
+  source ~/.vim/snipmate-snippets/support_functions.vim
+endif
 
 " global settings
 syntax on
@@ -19,13 +20,14 @@ set smartindent
 set hidden
 set visualbell t_vb=					" disable error bell sound
 filetype plugin indent on
+noremap ; :
 
 "=====================
 
 
 " preference settings
 colorscheme molokai
-set guifont=Monaco\ 11
+set guifont=Anonymous\ Pro\:h11
 set colorcolumn=80
 noremap ; :
 
@@ -50,11 +52,11 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 
 " encoding settings for support chinese
-set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936
 if has("win32")
 	set fileencoding=chinese
 else
+	set encoding=utf-8
 	set fileencoding=utf-8
 endif
 
