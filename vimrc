@@ -29,6 +29,8 @@ noremap ; :
 colorscheme molokai
 if has("win32")
 	set guifont=Anonymous\ Pro\:h11
+elseif has("macunix")
+	set guifont=Monaco\:h14
 else
 	set guifont=Monaco
 endif
