@@ -26,9 +26,9 @@ noremap ; :
 
 
 " preference settings
-colorscheme molokai
+colorscheme wombat
 if has("win32")
-	set guifont=Anonymous\ Pro\:h11
+	set guifont=Consolas:h11
 elseif has("macunix")
 	set guifont=Monaco\:h14
 else
@@ -134,6 +134,8 @@ let g:user_zen_settings = {
 \    'extends' : 'html',
 \  },
 \}
+
+let g:user_zen_expandabbr_key = '<c-e>' 
 let g:use_zen_complete_tag = 1
 
 "==================
@@ -148,5 +150,3 @@ let Tlist_Close_On_Select = 1			"选择了tag后自动关闭taglist窗口
 let Tlist_GainFocus_On_ToggleOpen = 1	"TlistToggle时,输入焦点在taglist窗口中
 map <silent> <leader>tl :TlistToggle<cr>
 map <silent> <leader>nt :NERDTreeToggle<cr>
-
-let g:blogconfig = "~titan/.vim/blog.config"
