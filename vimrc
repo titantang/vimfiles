@@ -18,6 +18,7 @@ let mapleader=","
 set autoindent
 set smartindent
 set hidden
+set number
 set visualbell t_vb=					" disable error bell sound
 filetype plugin indent on
 noremap ; :
