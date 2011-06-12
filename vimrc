@@ -33,7 +33,7 @@ if has("win32")
 elseif has("macunix")
 	set guifont=Monaco\:h14
 else
-	set guifont=Monaco
+	set guifont=Monaco\ 11
 endif
 set colorcolumn=80
 noremap ; :
