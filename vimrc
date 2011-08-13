@@ -27,7 +27,9 @@ noremap ; :
 
 
 " preference settings
-colorscheme wombat
+colorscheme solarized
+set background=dark
+let g:solarized_termcolors=256
 if has("win32")
 	set guifont=Consolas:h11
 elseif has("macunix")
