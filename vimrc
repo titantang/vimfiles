@@ -21,7 +21,6 @@ set hidden
 set number
 set visualbell t_vb=					" disable error bell sound
 filetype plugin indent on
-noremap ; :
 
 "=====================
 
@@ -38,7 +37,6 @@ else
 	set guifont=Monaco\ 11
 endif
 set colorcolumn=80
-noremap ; :
 
 set tabstop=4
 set shiftwidth=4
@@ -83,7 +81,6 @@ noremap <a-7> 7gt<cr>
 noremap <a-8> 8gt<cr>
 noremap <a-9> 9gt<cr>
 
-noremap <c-t> :CommandT<cr>
 set pastetoggle=<f2> " do not auto indent when pasting code
 nnoremap j gj
 nnoremap k gk
@@ -151,5 +148,7 @@ let Tlist_Use_Right_Window = 1			"在右侧窗口中显示taglist窗口
 let Tlist_Sort_Type = 'name'			"使taglist以tag名字进行排序
 let Tlist_Close_On_Select = 1			"选择了tag后自动关闭taglist窗口
 let Tlist_GainFocus_On_ToggleOpen = 1	"TlistToggle时,输入焦点在taglist窗口中
+map <leader>tt :CommandT<cr>
+map <leader>tf :CommandTFlush<cr>
 map <silent> <leader>tl :TlistToggle<cr>
 map <silent> <leader>nt :NERDTreeToggle<cr>
