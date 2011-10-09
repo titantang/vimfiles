@@ -52,8 +52,8 @@ set smartcase
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-"set list
-"set listchars=tab:▸\ ,eol:¬
+set list
+set listchars=tab:▸\ ,trail:.
 
 "=====================
 
@@ -135,7 +135,11 @@ let g:user_zen_settings = {
 \  },
 \}
 
-let g:user_zen_expandabbr_key = '<c-e>' 
+if (has('macunix'))
+	let g:user_zen_expandabbr_key = '<D-e>'
+else
+	let g:user_zen_expandabbr_key = '<c-e>'
+endif
 let g:use_zen_complete_tag = 1
 
 "==================
