@@ -52,8 +52,9 @@ set smartcase
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-set list
+" set list
 set listchars=tab:▸\ ,trail:.
+noremap <silent><leader>s :set nolist!<CR>
 
 "=====================
 
@@ -156,3 +157,8 @@ map <leader>tt :CommandT<cr>
 map <leader>tf :CommandTFlush<cr>
 map <silent> <leader>tl :TlistToggle<cr>
 map <silent> <leader>nt :NERDTreeToggle<cr>
+
+" TagmaBufMgr
+let g:TagmaBufMgrAutoDisplay = 0
+let g:TagmaBufMgrCloseSelect = 1
+let g:TagmaBufMgrLastWindow = 1
