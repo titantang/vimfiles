@@ -52,8 +52,9 @@ set smartcase
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-"set list
-"set listchars=tab:▸\ ,eol:¬
+" set list
+set listchars=tab:▸\ ,trail:.
+noremap <silent><leader>s :set nolist!<CR>
 
 "=====================
 
@@ -135,7 +136,11 @@ let g:user_zen_settings = {
 \  },
 \}
 
-let g:user_zen_expandabbr_key = '<c-e>' 
+if (has('macunix'))
+	let g:user_zen_expandabbr_key = '<D-e>'
+else
+	let g:user_zen_expandabbr_key = '<c-e>'
+endif
 let g:use_zen_complete_tag = 1
 
 "==================
@@ -152,3 +157,8 @@ map <leader>tt :CommandT<cr>
 map <leader>tf :CommandTFlush<cr>
 map <silent> <leader>tl :TlistToggle<cr>
 map <silent> <leader>nt :NERDTreeToggle<cr>
+
+" TagmaBufMgr
+let g:TagmaBufMgrAutoDisplay = 0
+let g:TagmaBufMgrCloseSelect = 1
+let g:TagmaBufMgrLastWindow = 1
