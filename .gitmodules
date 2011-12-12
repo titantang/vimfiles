@@ -61,3 +61,6 @@
 [submodule "bundle/TagmaBufMgr"]
 	path = bundle/TagmaBufMgr
 	url = https://github.com/LStinson/TagmaBufMgr.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
