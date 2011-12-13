@@ -97,6 +97,9 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
+" Pressing < or > will let you indent/unident selected lines
+vnoremap < <gv
+vnoremap > >gv
 "====================
 
 
