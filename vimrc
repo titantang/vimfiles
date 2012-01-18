@@ -1,15 +1,6 @@
 " load pathogen plugin manager
 call pathogen#runtime_append_all_bundles()
 
-" load snipmate-snippets support_functions.vim
-if has("win32")
-  let g:snippets_dir="~/vimfiles/snipmate-snippets"
-  source ~/vimfiles/snipmate-snippets/support_functions.vim
-else
-  let g:snippets_dir="~/.vim/snipmate-snippets"
-  source ~/.vim/snipmate-snippets/support_functions.vim
-endif
-
 " global settings
 syntax on
 set nocompatible
@@ -30,7 +21,7 @@ colorscheme solarized
 set background=dark
 let g:solarized_termcolors=256
 if has("win32")
-	set guifont=Consolas:h11
+	set guifont=Anonymous\ Pro:h11
 elseif has("macunix")
 	set guifont=Monaco\:h14
 else
@@ -53,7 +44,7 @@ set smartcase
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " set list
-set listchars=tab:▸\ ,trail:.
+"set listchars=tab:▸\ ,trail:.
 noremap <silent><leader>s :set nolist!<CR>
 
 "=====================
