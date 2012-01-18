@@ -43,8 +43,8 @@ set smartcase
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-" set list
-"set listchars=tab:▸\ ,trail:.
+set list
+set listchars=tab:>\ ,trail:.
 noremap <silent><leader>s :set nolist!<CR>
 
 "=====================
@@ -149,11 +149,6 @@ let Tlist_Close_On_Select = 1			"选择了tag后自动关闭taglist窗口
 let Tlist_GainFocus_On_ToggleOpen = 1	"TlistToggle时,输入焦点在taglist窗口中
 map <silent> <leader>tl :TlistToggle<cr>
 map <silent> <leader>nt :NERDTreeToggle<cr>
-
-" TagmaBufMgr
-let g:TagmaBufMgrAutoDisplay = 0
-let g:TagmaBufMgrCloseSelect = 1
-let g:TagmaBufMgrLastWindow = 1
 
 " ctrlp
 "let g:ctrlp_user_command = 'find %s -type f'       " MacOSX/Linux
