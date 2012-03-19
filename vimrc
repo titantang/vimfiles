@@ -44,7 +44,7 @@ set smartcase
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 set list
-set listchars=tab:>\ ,trail:.
+set listchars=tab:▸\ ,eol:¬
 noremap <silent><leader>s :set nolist!<CR>
 
 "=====================
