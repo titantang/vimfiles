@@ -83,10 +83,10 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 "noremap <c-V> <esc>"+gP
 
-vmap <C-c> "+yi
-vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
-imap <C-v> <ESC>"+pa
+"vmap <C-c> "+yi
+"vmap <C-x> "+c
+"vmap <C-v> c<ESC>"+p
+"imap <C-v> <ESC>"+pa
 
 " Pressing < or > will let you indent/unident selected lines
 vnoremap < <gv
@@ -151,4 +151,5 @@ map <silent> <leader>tl :TlistToggle<cr>
 map <silent> <leader>nt :NERDTreeToggle<cr>
 
 " ctrlp
-"let g:ctrlp_user_command = 'find %s -type f'       " MacOSX/Linux
+let g:ctrlp_user_command = 'find %s -type f'       " MacOSX/Linux
+let g:ctrlp_dotfiles = 1
