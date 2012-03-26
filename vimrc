@@ -1,5 +1,5 @@
 " load pathogen plugin manager
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 " global settings
 syntax on
@@ -8,6 +8,7 @@ set backspace=2
 let mapleader=","
 set autoindent
 set smartindent
+set smarttab
 set hidden
 set number
 set visualbell t_vb=					" disable error bell sound
@@ -41,7 +42,7 @@ set gdefault
 set ignorecase
 set smartcase
 
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg="ack -H --nocolor --nogroup --column"
 
 set list
 set listchars=tab:▸\ ,eol:¬
@@ -153,3 +154,7 @@ map <silent> <leader>nt :NERDTreeToggle<cr>
 " ctrlp
 let g:ctrlp_user_command = 'find %s -type f'       " MacOSX/Linux
 let g:ctrlp_dotfiles = 1
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
+
+nnoremap <silent> <D-t> :CommandT<CR>
+
