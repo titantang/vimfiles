@@ -24,7 +24,9 @@ let g:solarized_termcolors=256
 if has("win32")
 	set guifont=Anonymous\ Pro:h11
 elseif has("macunix")
-	set guifont=Monaco\:h14
+	"set guifont=Monaco\:h14
+    set guifont=Monaco\ for\ Powerline:h13
+    let g:Powerline_symbols = 'fancy'
 else
 	set guifont=Monaco\ 11
 endif
