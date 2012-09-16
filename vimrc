@@ -159,4 +159,5 @@ let g:ctrlp_dotfiles = 1
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
 
 nnoremap <silent> <D-t> :CommandT<CR>
+nnoremap <silent> <leader>tt :CommandT<CR>
 
