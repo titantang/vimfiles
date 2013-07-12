@@ -1,1 +1,0 @@
-au BufRead,BufNewFile *.tdf		set filetype=tdf
