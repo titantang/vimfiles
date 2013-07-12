@@ -1,6 +1,2 @@
-.netrwhist
-*~
-*.swp
-blog.config
-passwords.vim
-.svn/
+bundle/**
+!.gitkeep
