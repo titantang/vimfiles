@@ -6,10 +6,13 @@ let mapleader=","
 set autoindent
 set smartindent
 set smarttab
+set expandtab
 set hidden
 set number
 set visualbell t_vb=					" disable error bell sound
+set mouse=a
 filetype off
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
 " }}}
 
 " Bundles {{{
@@ -22,13 +25,13 @@ Bundle 'gmarik/vundle'
 
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-coffee-script'
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'delimitMate.vim'
 Bundle 'othree/html5.vim'
 Bundle 'matchit.zip'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'ervandew/supertab'
+" Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'taglist.vim'
 Bundle 'altercation/vim-colors-solarized'
@@ -36,9 +39,11 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
 Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/snipmate-snippets'
+Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-surround'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
+Bundle "pangloss/vim-javascript"
+Bundle 'aaronbieber/quicktask'
 " }}}
 
 " preference settings {{{
@@ -75,8 +80,10 @@ let g:ackprg="ack -H --nocolor --nogroup --column"
 set foldmethod=marker
 
 set list
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:.
 noremap <silent><leader>s :set nolist!<CR>
+noremap <leader>r :%s/\s\+$//<cr>
+
 " }}}
 
 " encoding settings for support chinese {{{
@@ -154,5 +161,9 @@ nnoremap <silent> <leader>tt :CommandT<CR>
 " }}}
 "
 " snipmate {{{
-let g:snippets_dir = '~/.vim/bundle/snipmate-snippets/snippets'
+let g:snippets_dir = '~/.vim/bundle/vim-snippets/snippets'
+" }}}
+
+" delimitMate {{{
+let delimitMate_expand_cr = 1
 " }}}
