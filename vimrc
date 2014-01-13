@@ -60,7 +60,7 @@ elseif has("macunix")
 else
 	set guifont=Monaco\ 11
 endif
-set colorcolumn=80
+set colorcolumn=100
 
 set tabstop=4
 set shiftwidth=4
