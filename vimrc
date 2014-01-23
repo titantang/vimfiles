@@ -44,6 +44,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'mattn/emmet-vim'
 Bundle "pangloss/vim-javascript"
 Bundle 'aaronbieber/quicktask'
+Bundle 'bufexplorer.zip'
+Bundle 'Lokaltog/vim-easymotion'
+
 " }}}
 
 " preference settings {{{
