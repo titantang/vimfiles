@@ -31,14 +31,15 @@ Bundle 'othree/html5.vim'
 Bundle 'matchit.zip'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-" Bundle 'ervandew/supertab'
+"Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'taglist.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
-Bundle 'msanders/snipmate.vim'
+"Bundle 'garbas/snipmate.vim'
+Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-surround'
 Bundle 'mattn/emmet-vim'
@@ -46,6 +47,8 @@ Bundle "pangloss/vim-javascript"
 Bundle 'aaronbieber/quicktask'
 Bundle 'bufexplorer.zip'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'jade.vim'
+Bundle 'scala.vim'
 
 " }}}
 
@@ -87,6 +90,7 @@ set listchars=tab:▸\ ,eol:¬,trail:.
 noremap <silent><leader>s :set nolist!<CR>
 noremap <leader>r :%s/\s\+$//<cr>
 
+au BufRead,BufNewFile *.scala set filetype=scala
 " }}}
 
 " encoding settings for support chinese {{{
@@ -157,14 +161,17 @@ map <silent> <leader>nt :NERDTreeToggle<cr>
 " ctrlp {{{
 let g:ctrlp_user_command = 'find %s -type f'       " MacOSX/Linux
 let g:ctrlp_dotfiles = 1
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.swp  " Linux/MacOSX
 
 nnoremap <silent> <D-t> :CommandT<CR>
 nnoremap <silent> <leader>tt :CommandT<CR>
 " }}}
 "
-" snipmate {{{
-let g:snippets_dir = '~/.vim/bundle/vim-snippets/snippets'
+" snippets support {{{
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" let g:snippets_dir = '~/.vim/bundle/vim-snippets/snippets'
 " }}}
 
 " delimitMate {{{
