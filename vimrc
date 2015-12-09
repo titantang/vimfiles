@@ -31,7 +31,7 @@ Bundle 'othree/html5.vim'
 Bundle 'matchit.zip'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-"Bundle 'ervandew/supertab'
+Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'taglist.vim'
 Bundle 'altercation/vim-colors-solarized'
@@ -49,6 +49,7 @@ Bundle 'bufexplorer.zip'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jade.vim'
 Bundle 'scala.vim'
+Bundle 'klen/python-mode'
 
 " }}}
 
@@ -91,6 +92,7 @@ noremap <silent><leader>s :set nolist!<CR>
 noremap <leader>r :%s/\s\+$//<cr>
 
 au BufRead,BufNewFile *.scala set filetype=scala
+au FileType c,cpp,java,php,ruby,html,javascript,css autocmd BufWritePre <buffer> :%s/\s\+$//e
 " }}}
 
 " encoding settings for support chinese {{{
@@ -159,9 +161,13 @@ map <silent> <leader>nt :NERDTreeToggle<cr>
 " }}}
 
 " ctrlp {{{
-let g:ctrlp_user_command = 'find %s -type f'       " MacOSX/Linux
 let g:ctrlp_dotfiles = 1
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.swp  " Linux/MacOSX
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.swp,*.pyc  " Linux/MacOSX
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(pyc)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 nnoremap <silent> <D-t> :CommandT<CR>
 nnoremap <silent> <leader>tt :CommandT<CR>
@@ -176,4 +182,8 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " delimitMate {{{
 let delimitMate_expand_cr = 1
+" }}}
+
+" python-mode {{{
+let g:pymode_rope_complete_on_dot = 0
 " }}}
