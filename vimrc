@@ -1,5 +1,4 @@
 " global settings {{{
-syntax on
 set nocompatible
 set backspace=2
 let mapleader=","
@@ -11,51 +10,44 @@ set hidden
 set number
 set visualbell t_vb=					" disable error bell sound
 set mouse=a
-filetype off
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
 " }}}
 
 " Bundles {{{
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.vim/bundle')
 
-" let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
 
-Bundle 'mileszs/ack.vim'
-Bundle 'vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'delimitMate.vim'
-Bundle 'othree/html5.vim'
-Bundle 'matchit.zip'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'ervandew/supertab'
-Bundle 'godlygeek/tabular'
-Bundle 'taglist.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-repeat'
-"Bundle 'garbas/snipmate.vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-Bundle 'tpope/vim-surround'
-Bundle 'mattn/emmet-vim'
-Bundle "pangloss/vim-javascript"
-Bundle 'aaronbieber/quicktask'
-Bundle 'bufexplorer.zip'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'jade.vim'
-Bundle 'scala.vim'
-Bundle 'klen/python-mode'
+" Plugins listing
+Plug 'mileszs/ack.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'othree/html5.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
+Plug 'altercation/vim-colors-solarized'
+Plug 'Lokaltog/vim-powerline'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'aaronbieber/quicktask'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'python-mode/python-mode'
+Plug 'leafgarland/typescript-vim'
+
+
+call plug#end()
 
 " }}}
 
 " preference settings {{{
-filetype plugin indent on
-set background=dark
+set background=light
 colorscheme solarized
 let g:solarized_termcolors=256
 if has("win32")
@@ -84,7 +76,7 @@ set ignorecase
 set smartcase
 set laststatus=2
 
-let g:ackprg="ack -H --nocolor --nogroup --column"
+let g:ackprg="ag -H --nocolor --nogroup --column"
 
 set foldmethod=marker
 
@@ -92,6 +84,7 @@ set list
 set listchars=tab:▸\ ,eol:¬,trail:.
 noremap <silent><leader>s :set nolist!<CR>
 noremap <leader>r :%s/\s\+$//<cr>
+:imap jj <Esc>
 
 au BufRead,BufNewFile *.scala set filetype=scala
 au FileType c,cpp,java,php,ruby,html,javascript,css autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -176,9 +169,9 @@ nnoremap <silent> <leader>tt :CommandT<CR>
 " }}}
 "
 " snippets support {{{
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " let g:snippets_dir = '~/.vim/bundle/vim-snippets/snippets'
 " }}}
 
@@ -188,4 +181,5 @@ let delimitMate_expand_cr = 1
 
 " python-mode {{{
 let g:pymode_rope_complete_on_dot = 0
+let g:pymode_python = 'python3'
 " }}}
