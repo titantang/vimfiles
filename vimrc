@@ -20,7 +20,7 @@ call plug#begin('~/.vim/bundle')
 
 " Plugins listing
 Plug 'mileszs/ack.vim'
-Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'kien/ctrlp.vim'
 Plug 'othree/html5.vim'
 Plug 'scrooloose/nerdtree'
@@ -29,17 +29,19 @@ Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'altercation/vim-colors-solarized'
 Plug 'Lokaltog/vim-powerline'
-Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-repeat'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
-Plug 'aaronbieber/quicktask'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'python-mode/python-mode'
-Plug 'leafgarland/typescript-vim'
+Plug 'python-mode/python-mode', { 'branch': 'develop', 'for': 'python' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'jiangmiao/auto-pairs'
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'mechatroner/rainbow_csv'
 
 
 call plug#end()
@@ -99,9 +101,6 @@ else
 	set fileencoding=utf-8
 endif
 
-au FileType html let b:delimitMate_autoclose = 0 
-
-
 "====================
 
 set pastetoggle=<f2> " do not auto indent when pasting code
@@ -144,13 +143,7 @@ endif
 let g:use_zen_complete_tag = 1
 " }}}
 
-" taglist {{{
-let Tlist_Show_One_File = 1				"不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow = 1			"如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window = 1			"在右侧窗口中显示taglist窗口
-let Tlist_Sort_Type = 'name'			"使taglist以tag名字进行排序
-let Tlist_Close_On_Select = 1			"选择了tag后自动关闭taglist窗口
-let Tlist_GainFocus_On_ToggleOpen = 1	"TlistToggle时,输入焦点在taglist窗口中
+" NerdTree {{{
 map <silent> <leader>tl :TlistToggle<cr>
 map <silent> <leader>nt :NERDTreeToggle<cr>
 " }}}
@@ -163,9 +156,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(pyc)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
-
-nnoremap <silent> <D-t> :CommandT<CR>
-nnoremap <silent> <leader>tt :CommandT<CR>
 " }}}
 "
 " snippets support {{{
@@ -173,10 +163,6 @@ nnoremap <silent> <leader>tt :CommandT<CR>
 " let g:UltiSnipsJumpForwardTrigger="<tab>"
 " let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " let g:snippets_dir = '~/.vim/bundle/vim-snippets/snippets'
-" }}}
-
-" delimitMate {{{
-let delimitMate_expand_cr = 1
 " }}}
 
 " python-mode {{{
